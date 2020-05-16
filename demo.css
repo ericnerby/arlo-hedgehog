@@ -49,7 +49,7 @@ div > section:nth-of-type(2) {
 
 .font-pair-1 p,
 .font-pair-1 .author-span {
-    font-family: 'Crimson Pro', serif;
+    font-family: 'Merriweather', serif;
 }
 
 .font-pair-2 p,
@@ -80,7 +80,7 @@ div > section:nth-of-type(2) {
 
 .font-pair-6 p,
 .font-pair-6 .author-span {
-    font-family: 'Merriweather', serif;
+    font-family: 'Crimson Pro', serif;
 }
 
 /* --- Display Font ----------------- */
