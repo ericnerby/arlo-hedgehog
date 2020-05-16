@@ -1,0 +1,49 @@
+/* --- Perfect 4th type scale ---
+base 1.125em (18px)
+
+4.209em (75.76px)
+3.157em (56.83px)
+2.369em (42.63px)
+1.777em (31.98px)
+1.333em (23.99px)
+1em     (18.00px) - body
+0.75em  (13.50px)
+*/
+
+* {
+    box-sizing: border-box;
+}
+
+/* --- Typography ----------------- */
+
+body {
+    font-size: 1.125em;
+    /* final copy font hasn't been decided, yet */
+    font-family: TimesNewRoman,'Times New Roman',Times,Baskerville,Georgia,serif; 
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Indie Flower', 'Comic Sans', cursive;
+    font-weight: normal;
+}
+
+h3 {
+    font-size: 1.333em;
+}
+h2 {
+    font-size: 1.777em;
+}
+h1 {
+    font-size: 2.369em;
+    margin-bottom: .1em;
+}
+
+/* --- Basic Layout ----------------- */
+
+/* --- Special Elements ----------------- */
+
+.author-span {
+    font-size: 1.333em;
+}
