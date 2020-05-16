@@ -18,8 +18,7 @@ base 1.125em (18px)
 
 body {
     font-size: 1.125em;
-    /* final copy font hasn't been decided, yet */
-    font-family: TimesNewRoman,'Times New Roman',Times,Baskerville,Georgia,serif; 
+    font-family: 'Gelasio', 'Times New Roman',Times,Baskerville,Georgia,serif;
 }
 
 h1,
