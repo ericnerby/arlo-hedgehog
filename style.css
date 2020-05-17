@@ -21,6 +21,11 @@ body {
     font-family: 'Gelasio', 'Times New Roman',Times,Baskerville,Georgia,serif;
 }
 
+.main-nav button {
+    font-family: 'Indie Flower', 'Comic Sans', cursive;
+    text-transform: lowercase;
+}
+
 h1,
 h2,
 h3 {
