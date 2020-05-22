@@ -50,6 +50,17 @@ h1 {
 
 /* --- Basic Layout ----------------- */
 
+.main-header,
+.main-nav,
+.main-banner {
+    display: flex;
+    flex-direction: column;
+}
+
+.header-photo {
+    align-self: center;
+}
+
 /* --- Special Elements ----------------- */
 
 .author-span {
