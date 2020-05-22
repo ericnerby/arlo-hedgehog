@@ -57,9 +57,11 @@ h1 {
     flex-direction: column;
 }
 
-.header-photo {
-    align-self: center;
+.main-banner {
+    align-items: center;
+    text-align: center;
 }
+
 
 /* --- Special Elements ----------------- */
 
