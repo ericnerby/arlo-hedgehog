@@ -14,6 +14,12 @@ base 1.125em (18px)
     box-sizing: border-box;
 }
 
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
 /* --- Typography ----------------- */
 
 body {
@@ -21,11 +27,7 @@ body {
     font-family: 'Gelasio', 'Times New Roman',Times,Baskerville,Georgia,serif;
     line-height: 1.7;
     color: #1B1F20;
-}
-
-.main-nav button {
-    font-family: 'Indie Flower', 'Comic Sans', cursive;
-    text-transform: lowercase;
+    background-color: #E9EFF2;
 }
 
 h1,
@@ -51,21 +53,62 @@ h1 {
 
 /* --- Basic Layout ----------------- */
 
+/* - Navigation --------- */
+.main-nav button {
+    font-family: 'Indie Flower', 'Comic Sans', cursive;
+    text-transform: lowercase;
+    border: none;
+    padding-top: .5em;
+    padding-bottom: .5em;
+    border-radius: .1em;
+}
+
+.main-nav button:nth-of-type(even) {
+    background-color: #D9ADC5;
+}
+.main-nav button:nth-of-type(odd) {
+    background-color: #8DF2F2;
+}
+.main-nav button:nth-of-type(even):hover {
+    background-color: #EDC1D9;
+}
+.main-nav button:nth-of-type(odd):hover {
+    background-color: #9AFFFF;
+}
+
+/* - Banner --------- */
+.author-span {
+    font-size: 1.333em;
+}
 .main-header,
 .main-nav,
 .main-banner {
     display: flex;
     flex-direction: column;
 }
-
 .main-banner {
     align-items: center;
     text-align: center;
 }
 
+/* - Content --------- */
+.content-section {
+    padding: 0 1em;
+}
+
+/* - Footer --------- */
+.main-footer {
+    background: transparent linear-gradient(to top, #7AD977, transparent 50%);
+    display: flex;
+    justify-content: space-around;
+}
+.footer-image,
+.footer-content {
+    flex: 0 1 50%;
+}
+.footer-image {
+    max-width: 45%;
+}
 
 /* --- Special Elements ----------------- */
 
-.author-span {
-    font-size: 1.333em;
-}
