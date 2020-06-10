@@ -117,8 +117,12 @@ main {
 .content-divider {
     text-align: center;
 }
-.divider-image {
+.divider-image-sm {
     height: 5em;
+}
+.divider-image-lg {
+    width: 5em;
+    display: none;
 }
 
 /* - Footer --------- */
@@ -139,6 +143,7 @@ main {
 }
 .footer-content {
     text-align: right;
+    padding-top: 6em;
 }
 .main-footer span {
     display: block;
@@ -155,4 +160,60 @@ a {
 a:hover {
     color: #EDC1D9;
     border-bottom: 2px solid #EDC1D9;
+}
+
+/* --- Media Queries ----------------- */
+
+@media screen and (min-width: 620px) {
+    .main-nav {
+        flex-direction: row;
+        justify-content: center;
+    }
+    .footer-image {
+        max-width: 275px;
+    }
+    .footer-content {
+        text-align: center;
+        font-size: 1.333em;
+    }
+
+}
+
+@media screen and (min-width: 880px) {
+    .main-banner {
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+}
+
+@media screen and (min-width: 1100px) {
+    main {
+        flex-direction: row;
+        justify-content: center;
+    }
+    .main-header {
+        margin-bottom: 5em;
+    }
+    
+    /* .main-banner {
+        justify-content: flex-start;
+    } */
+    .divider-image-sm {
+        display: none;
+    }
+    .divider-image-lg {
+        display: initial;
+    }
+    
+}
+
+@media screen and (min-width: 1200px) {
+    .main-header {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .main-nav {
+        align-items: center;
+        justify-content: flex-end;
+    }
 }
