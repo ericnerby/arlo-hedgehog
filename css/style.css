@@ -64,25 +64,29 @@ h1 {
 /* --- Basic Layout ----------------- */
 
 /* - Navigation --------- */
-.main-nav button {
+.main-nav a {
+    display: block;
+    text-decoration: none;
     font-family: 'Indie Flower', 'Comic Sans', cursive;
+    font-weight: 400;
+    text-align: center;
+    color: #1B1F20;
     text-transform: lowercase;
     border: none;
-    padding-top: .5em;
-    padding-bottom: .5em;
+    padding: .5em;
     border-radius: .1em;
 }
 
-.main-nav button:nth-of-type(even) {
+.main-nav a:nth-of-type(even) {
     background-color: #D9ADC5;
 }
-.main-nav button:nth-of-type(odd) {
+.main-nav a:nth-of-type(odd) {
     background-color: #8DF2F2;
 }
-.main-nav button:nth-of-type(even):hover {
+.main-nav a:nth-of-type(even):hover {
     background-color: #EDC1D9;
 }
-.main-nav button:nth-of-type(odd):hover {
+.main-nav a:nth-of-type(odd):hover {
     background-color: #9AFFFF;
 }
 
@@ -151,14 +155,35 @@ main {
 /* --- Special Elements ----------------- */
 
 /* - Links --------- */
-a {
+main a,
+footer a {
     color: #D9ADC5;
     text-decoration: none;
     font-weight: bold;
 }
-a:hover {
+
+main a:hover,
+footer a:hover {
     color: #EDC1D9;
     border-bottom: 2px solid #EDC1D9;
+}
+
+/* - Special Headings --------- */
+h1.sec-page-title {
+    text-align: center;
+}
+
+/* - Image Gallery --------- */
+.image-gallery {
+    margin-bottom: 1em;
+}
+.image-gallery img {
+    display: block;
+    width: 90%;
+    max-width: 800px;
+    border: 1em solid #8DF2F2;
+    box-shadow: 1em 1em 1em #1B1F20;
+    margin: 1em auto 0;
 }
 
 /* --- Media Queries ----------------- */
@@ -194,6 +219,9 @@ a:hover {
     .main-header,
     main {
         margin-bottom: 3em;
+    }
+    #art-gallery-header {
+        margin-bottom: 0;
     }
     
     /* .main-banner {
