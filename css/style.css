@@ -173,18 +173,7 @@ h1.sec-page-title {
     text-align: center;
 }
 
-/* - Image Gallery --------- */
-.image-gallery {
-    margin-bottom: 1em;
-}
-.image-gallery img {
-    display: block;
-    width: 90%;
-    max-width: 800px;
-    border: 1em solid #8DF2F2;
-    box-shadow: 1em 1em 1em #1B1F20;
-    margin: 1em auto 0;
-}
+
 
 /* --- Media Queries ----------------- */
 
@@ -219,9 +208,6 @@ h1.sec-page-title {
     .main-header,
     main {
         margin-bottom: 3em;
-    }
-    #art-gallery-header {
-        margin-bottom: 0;
     }
     
     /* .main-banner {

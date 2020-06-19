@@ -1,0 +1,99 @@
+/* --- Image Gallery ----------------- */
+.image-gallery-frame {
+    margin-bottom: 1em;
+    max-width: 1100px;
+    width: 100%;
+}
+.image-gallery {
+    display: block;
+    width: 95%;
+    max-width: 1050px;
+    position: relative;
+}
+.image-gallery img {
+    width: 100%;
+}
+
+.slides {
+    display: none;
+}
+
+/* - Previous and Next Buttons -- */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: #8DF2F2;
+    font-weight: bold;
+    font-size: 1.5em;
+    transition: 0.6s ease;
+    user-select: none;
+}
+.next {
+    right: 0;
+}
+
+/* - Caption -- */
+.caption {
+    position: absolute;
+    bottom: .5em;
+    width: 100%;
+    text-align: center;
+}
+
+.number-text {
+    padding: .5em .75em;
+    position: absolute;
+    top: 0;
+}
+
+/* - Indicator Dots -- */
+.dot {
+    cursor: pointer;
+    height: 1em;
+    width: 1em;
+    margin: 0 2px;
+    background-color: #8DF2F2;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+    background-color: #D9ADC5;
+  }
+
+/* - Fade Animation -- */
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @-webkit-keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+  
+  @keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+
+/* --- Media Queries ----------------- */
+@media screen and (min-width: 620px) {
+    .image-gallery-frame {
+        width: 95%;
+    }
+}
+
+@media screen and (min-width: 1100px) {
+    #art-gallery-header {
+        margin-bottom: 0;
+    }
+}
