@@ -1,17 +1,30 @@
 /* --- Image Gallery ----------------- */
 .image-gallery-frame {
-    margin-bottom: 1em;
+    display: block;
+    padding: 1em;
+    margin-bottom: 2em;
     max-width: 1100px;
     width: 100%;
+    background-color: rgba(27, 31, 32, .1);
+    border-radius: .25em;
 }
 .image-gallery {
+    font-family: 'Indie Flower', 'Comic Sans', cursive;
+    font-size: 1.333em;
     display: block;
+    margin-left: auto;
+    margin-right: auto;
     width: 95%;
     max-width: 1050px;
     position: relative;
 }
 .image-gallery img {
-    width: 100%;
+    max-width: 100%;
+    max-height: 90vh;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .slides {
@@ -20,20 +33,31 @@
 
 /* - Previous and Next Buttons -- */
 .prev, .next {
+    background-color: rgba(233, 239, 242, .5);
     cursor: pointer;
     position: absolute;
     top: 50%;
     width: auto;
-    margin-top: -22px;
-    padding: 16px;
+    margin-top: -1em;
+    padding: .3em;
     color: #8DF2F2;
     font-weight: bold;
     font-size: 1.5em;
     transition: 0.6s ease;
-    user-select: none;
+}
+.prev {
+    border-radius: 0 50% 50% 0;
+    left: 0;
 }
 .next {
+    border-radius: 50% 0 0 50%;
     right: 0;
+}
+.prev:hover,
+.next:hover {
+    border: none;
+    color: #9AFFFF;
+    background-color: rgba(233, 239, 242, .8);
 }
 
 /* - Caption -- */
@@ -42,12 +66,15 @@
     bottom: .5em;
     width: 100%;
     text-align: center;
+    background-color: rgba(233, 239, 242, .5);
 }
 
 .number-text {
     padding: .5em .75em;
     position: absolute;
     top: 0;
+    background-color: rgba(233, 239, 242, .5);
+    border-radius: 50%;
 }
 
 /* - Indicator Dots -- */
