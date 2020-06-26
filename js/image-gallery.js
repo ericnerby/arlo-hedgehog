@@ -1,3 +1,16 @@
+// ----- Select Buttons ----- /
+const prevButton = document.getElementsByClassName("prev");
+const nextButton = document.getElementsByClassName("next");
+const imageSelectors = document.querySelectorAll(".dot");
+
+// ----- Event Listeners ----- /
+prevButton.addEventListener('click', () => {
+    plusSlides(-1);
+});
+nextButton.addEventListener('click', () => {
+    plusSlides(1);
+});
+
 let slideIndex = 0;
 showSlides(slideIndex);
 
@@ -7,13 +20,25 @@ function plusSlides(n) {
 }
 
 // Dot selectors
+
+function generateDotSelectors(slides) {
+    let container = document.querySelector('.imageSelectors');
+    for (let i=0; i<slides.length; i++) {
+        let newDot = document.createElement('span');
+        newDot.innerHTML = `<span class="dot" id="selector${i}"></span>`;
+        container.appendChild(newDot);
+    }
+    let dots = document.getElementsByClassName("dot");
+    return dots;
+}
+
 function currentSlide(n) {
   showSlides(slideIndex = n);
 }
 
 function showSlides(n) {
     let slides = document.getElementsByClassName("slides");
-    let dots = document.getElementsByClassName("dot");
+    let dots = generateDotSelectors(slides);
     if (n >= slides.length) { // Go to the first image if next is clicked on the last image
         slideIndex = 0
     } else if (n < 0) { // Go to the last image if previous is clicked on the first image
