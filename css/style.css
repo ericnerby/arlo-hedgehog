@@ -27,7 +27,7 @@ body {
     font-family: 'Gelasio', 'Times New Roman',Times,Baskerville,Georgia,serif;
     line-height: 1.7;
     color: #1B1F20;
-    background-color: #E9EFF2;
+    background: #E9EFF2 url('../images/clouds.png') repeat-x;
 }
 
 p:nth-of-type(1)::first-letter {
