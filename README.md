@@ -4,7 +4,7 @@
 
 This repo is for a website for a childrens' book Kayla Nerby (my wife) is working on publishing. The book is titled *Arlo the Ordinary Hedgehog*. Since the book and website aren't published, certain details of the project may be placeholders rather than a finalized, ready to publish website.
 
-The pages available currently are the Home page (`index.html`) and the Art Gallery (`art-gallery.html`). The other links in the navigation are placeholders.
+The pages available currently are the Home page (`index.html`), Coloring Sheets (`coloring-sheets.html`), and the Art Gallery (`art-gallery.html`). The other links in the navigation are placeholders.
 
 ## Features Included for Code Louisville Front-End
 
