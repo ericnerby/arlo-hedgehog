@@ -169,7 +169,7 @@ footer a:hover {
 }
 
 a[href$=".pdf"] {
-    background-image: url('../images/pdf-icon.svg');
+    background-image: url('../images/pdf-icon.png');
     background-position: left;
     background-size: 1.3em auto;
     padding-left: 1.5em;
