@@ -29,6 +29,7 @@ body {
     color: #1B1F20;
     background: linear-gradient(rgba(233, 239, 242,.6),rgba(233, 239, 242,.6)),
                 url('../images/clouds.png') repeat-x;
+    background-attachment: fixed;
 }
 
 p:nth-of-type(1)::first-letter {
@@ -132,7 +133,7 @@ main {
 
 /* - Footer --------- */
 .main-footer {
-    background: transparent linear-gradient(to top, #7AD977, transparent 50%);
+    background: transparent linear-gradient(to top, #7AD977, #E9EFF2 50%, #E9EFF2 70%,transparent 90%);
     display: flex;
     justify-content: space-around;
     font-family: 'Indie Flower', 'Comic Sans', cursive;
