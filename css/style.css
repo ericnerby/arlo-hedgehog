@@ -14,12 +14,6 @@ base 1.125em (18px)
     box-sizing: border-box;
 }
 
-.clearfix::after {
-    content: "";
-    clear: both;
-    display: table;
-  }
-
 /* --- Typography ----------------- */
 
 body {
@@ -28,7 +22,7 @@ body {
     line-height: 1.7;
     color: #1B1F20;
     background: linear-gradient(rgba(233, 239, 242,.6),rgba(233, 239, 242,.6)),
-                url('../images/clouds.png') repeat-x;
+                top / contain url('../images/clouds.png') repeat-x;
     background-attachment: fixed;
 }
 
@@ -124,7 +118,8 @@ main {
     text-align: center;
 }
 .divider-image-sm {
-    height: 5em;
+    width: 400px;
+    max-width: 90vw;
 }
 .divider-image-lg {
     width: 5em;
