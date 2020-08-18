@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // this function is called when the page loads and when a slide selector of any kind is clicked
   function showSlides(n = (slideIndex += 1)) {
-    clearTimeout(slideTimer);
+    clearTimeout(slideTimer); // clear timer so it can be reset at the end of the function
     let dots = document.getElementsByClassName("dot");
     if (n >= slides.length) { // Go to the first image if next is clicked on the last image
       slideIndex = 0;
@@ -50,15 +50,13 @@ document.addEventListener("DOMContentLoaded", () => {
     hideSlides(dots)
     slides[slideIndex].style.display = "block"; // Display the selected slide
     dots[slideIndex].classList.add("active"); // Add active class to selected dot
-    slideTimer = window.setTimeout(showSlides, 10000);
+    slideTimer = window.setTimeout(showSlides, 10000); // set timer to show next slide after 10 seconds
   }
 
   function hideSlides(dots) {
-    for (let i = 0; i < slides.length; i++) { // Hide each slide in the collection
-      slides[i].style.display = "none";
-    }
-    for (let i = 0; i < dots.length; i++) { // Remove active class from each dot
-      dots[i].classList.remove("active");
+    for (let i = 0; i < slides.length; i++) { 
+      slides[i].style.display = "none"; // Hide each slide in the collection
+      dots[i].classList.remove("active"); // Remove active class from each dot
     }
   }
 
