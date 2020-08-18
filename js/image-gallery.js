@@ -1,60 +1,65 @@
-// ----- Initial Setup ----- /
+document.addEventListener("DOMContentLoaded", () => {
 
-// assign selector buttons and dots container to variables
-const prevButton = document.querySelector(".prev");
-const nextButton = document.querySelector(".next");
-let imageSelectors = document.querySelector('.imageSelectors');
+  // ----- Initial Setup ----- /
 
-// generate dots
-(function() {
-    // generate a dot for each slide when page loads
-    let slides = document.getElementsByClassName("slides");
-    for (let i=0; i<slides.length; i++) {
-        let newDot = document.createElement('span');
-        newDot.className = 'dot';
-        newDot.dataset.index = i;
-        imageSelectors.appendChild(newDot);
-    }
-})();
+  // assign selector buttons, slides, and dots container to variables
+  const prevButton = document.querySelector(".prev");
+  const nextButton = document.querySelector(".next");
+  const imageSelectors = document.querySelector(".imageSelectors");
+  const slides = document.getElementsByClassName("slides");
 
-// initialize slide index and call the showSlides function to display the first image
-let slideIndex = 0;
-showSlides(slideIndex);
+  //declare timer variable to be assigned in showSlides function
+  let slideTimer;
 
-// ----- Event Listeners ----- /
-prevButton.addEventListener('click', () => {
+  // generate a dot for each slide when page loads
+  for (let i=0; i<slides.length; i++) {
+    let newDot = document.createElement("span");
+    newDot.classList.add("dot");
+    newDot.dataset.index = i;
+    imageSelectors.appendChild(newDot);
+  }
+
+  // initialize slide index and call the showSlides function to display the first image
+  let slideIndex = 0;
+  showSlides(slideIndex);
+
+  // ----- Event Listeners ----- /
+  prevButton.addEventListener("click", () => {
     showSlides(slideIndex -= 1);
-});
-nextButton.addEventListener('click', () => {
+  });
+  nextButton.addEventListener("click", () => {
     showSlides(slideIndex += 1);
-});
+  });
 
-imageSelectors.addEventListener('click', (event) => {
+  imageSelectors.addEventListener("click", (event) => {
     slideIndex = event.target.dataset.index;
     showSlides(slideIndex);
-});
+  });
 
-// ----- Primary Functions ----- /
+  // ----- Primary Functions ----- /
 
-// this function is called when the page loads and when a slide selector of any kind is clicked
-function showSlides(n) {
-    let slides = document.getElementsByClassName("slides");
+  // this function is called when the page loads and when a slide selector of any kind is clicked
+  function showSlides(n = (slideIndex += 1)) {
+    clearTimeout(slideTimer);
     let dots = document.getElementsByClassName("dot");
     if (n >= slides.length) { // Go to the first image if next is clicked on the last image
-        slideIndex = 0;
+      slideIndex = 0;
     } else if (n < 0) { // Go to the last image if previous is clicked on the first image
-        slideIndex = slides.length -1;
+      slideIndex = slides.length -1;
     }
-    hideSlides(slides,dots)
+    hideSlides(dots)
     slides[slideIndex].style.display = "block"; // Display the selected slide
-    dots[slideIndex].className += " active"; // Add active class to selected dot
-}
+    dots[slideIndex].classList.add("active"); // Add active class to selected dot
+    slideTimer = window.setTimeout(showSlides, 10000);
+  }
 
-function hideSlides(slides,dots) {
+  function hideSlides(dots) {
     for (let i = 0; i < slides.length; i++) { // Hide each slide in the collection
-        slides[i].style.display = "none";
+      slides[i].style.display = "none";
     }
     for (let i = 0; i < dots.length; i++) { // Remove active class from each dot
-        dots[i].className = dots[i].className.replace(" active", "");
+      dots[i].classList.remove("active");
     }
-}
+  }
+
+});
